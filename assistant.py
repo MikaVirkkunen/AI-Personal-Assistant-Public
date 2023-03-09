@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 from datetime import datetime
 import os
+import time
 
 # Import namespaces
 import azure.cognitiveservices.speech as speech_sdk
@@ -71,4 +72,17 @@ def TellTime():
 
 
 if __name__ == "__main__":
-    main()
+
+# Set the start time
+ start_time = time.time()
+
+main()  
+
+# Calculate the elapsed time  
+elapsed_time = time.time() - start_time  
+
+# Check if 10 seconds have passed  
+if elapsed_time >= 10:  
+    print("Program ended after 10 seconds.")  
+else:  
+    print("Program ended before 10 seconds.")
