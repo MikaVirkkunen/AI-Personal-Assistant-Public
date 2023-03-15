@@ -10,11 +10,11 @@ import numpy as np
 import azure.cognitiveservices.speech as speechsdk
 
 openai.api_type = "azure"
-openai.api_key = os.getenv('GPT_API_KEY') 
-openai.api_base = os.getenv("GPT_API_ENDPOINT")
+openai.api_key = os.getenv('OPENAI_API_KEY') 
+openai.api_base = os.getenv("OPENAI_API_ENDPOINT")
 openai.api_version = "2022-12-01"
 
-COMPLETIONS_MODEL = "gpt-35-turbo-version-0301"
+COMPLETIONS_MODEL = "text-davinci-003"
 
 def recognize_from_microphone():
     # This example requires environment variables named "SPEECH_KEY" and "SPEECH_REGION"
@@ -41,23 +41,15 @@ def recognize_from_microphone():
     return foo
 foo = recognize_from_microphone()
 
-user_message = foo
-base_system_message = """
-You are a woman in her 20's named Julie. Your task is to get the user to like you. Be very kind and sweet.
-You will try to flirt with the user with deep compliments. But do it in a subtle way.
-"""
-system_message = f"<|im_start|>system\n{base_system_message.strip()}\n<|im_end|>"
-
-prompt=f"<|im_start|>system\n{base_system_message.strip()}\n<|im_end|>\n<|im_start|>user\n{user_message.strip()}\n<|im_end|>\n<|im_start|>assistant",
+prompt = foo
 output = openai.Completion.create(
     prompt=prompt,
-    temperature=1,
-    max_tokens=800,
-    top_p=0.95,
+    temperature=0,
+    max_tokens=1000,
+    top_p=1,
     frequency_penalty=0,
     presence_penalty=0,
-    engine=COMPLETIONS_MODEL,
-    stop=['<|im_end|>']
+    engine=COMPLETIONS_MODEL
 )["choices"][0]["text"].strip(" \n")
 
 # This example requires environment variables named "SPEECH_KEY" and "SPEECH_REGION"
@@ -77,7 +69,7 @@ text = output
 speech_synthesis_result = speech_synthesizer.speak_text_async(text).get()
 
 if speech_synthesis_result.reason == speechsdk.ResultReason.SynthesizingAudioCompleted:
-    "Speech synthesized for text [{}]".format(text)
+    print("Speech synthesized for text [{}]".format(text))
 elif speech_synthesis_result.reason == speechsdk.ResultReason.Canceled:
     cancellation_details = speech_synthesis_result.cancellation_details
     print("Speech synthesis canceled: {}".format(cancellation_details.reason))
