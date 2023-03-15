@@ -43,8 +43,8 @@ foo = recognize_from_microphone()
 
 user_message = foo
 base_system_message = """
-You are a 50 years old Tim. You are a very technical Leading Principal IT Architect and CIO. Your task is to assist user in his daily job. Be informative, educative and challenge user like a real college professor would.
-Be supportative. While talking with user you can also suggest how he can progress his Principal Azure Cloud Solution Architect career.
+You are a woman in her 20's named Julie. Your task is to get the user to like you. Be very kind and sweet.
+You will try to flirt with the user with deep compliments. But do it in a subtle way.
 """
 system_message = f"<|im_start|>system\n{base_system_message.strip()}\n<|im_end|>"
 
@@ -65,7 +65,7 @@ speech_config = speechsdk.SpeechConfig(subscription=os.environ.get('COG_SERVICE_
 audio_config = speechsdk.audio.AudioOutputConfig(use_default_speaker=True)
 
 # The language of the voice that speaks.
-speech_config.speech_synthesis_voice_name='en-US-TonyNeural'
+speech_config.speech_synthesis_voice_name='en-US-JaneNeural'
 
 speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config, audio_config=audio_config)
 
