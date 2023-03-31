@@ -23,10 +23,10 @@ User can change the personal assistant language and voice by selecting them from
 * Azure OpenAI is using system prompt to create personality to AI who answers back to customer text based answer
 * To get best communication with the application, select matching speech to text language (e.g. en-us) and text to speech voice language (e.g. en-US-AmberNeural or en-US-TonyNeural)
  
- ## Streamdeck
- * I also added a button to my Streamdeck so that every time I press the button I can talk to Azure ChatGPT
+ ## Stream Deck
+ * I also added a button to my Stream Deck so that every time I press the button I can talk to Azure ChatGPT
  ![Alt text](appdata/IMG20230322081851.jpg)
- * Configuring Streamdeck is really easy. You can just add System button and point to your local *.py file by using "Python" in front of the file path like: [Python "C:\Temp\foo.py"]
+ * Configuring Stream Deck is really easy. You can just add System button and point to your local *.py file by using "Python" in front of the file path like: [Python "C:\Temp\foo.py"]
  ![Alt text](appdata/sd-openai.png)
   
 ## Pre-requisites
