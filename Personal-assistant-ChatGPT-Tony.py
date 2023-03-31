@@ -1,13 +1,7 @@
-import os
-import azure.cognitiveservices.speech as speechsdk
-import openai
-import re
-import requests
-import sys
-from num2words import num2words
-import pandas as pd
-import numpy as np
-import azure.cognitiveservices.speech as speechsdk
+import os  
+import azure.cognitiveservices.speech as speechsdk  
+import openai  
+from num2words import num2words 
 
 openai.api_type = "azure"
 openai.api_key = os.getenv('GPT_API_KEY') 
@@ -43,7 +37,7 @@ foo = recognize_from_microphone()
 
 user_message = foo
 base_system_message = """
-You are a 50 years old Tim. You are a very technical Leading Principal IT Architect and CIO. Your task is to assist user in his daily job. Be informative, educative and challenge user like a real college professor would.
+You are a 50 years old Tony. You are a very technical Leading Principal IT Architect and CIO. Your task is to assist user in his daily job. Be informative, educative and challenge user like a real college professor would.
 Be supportative. While talking with user you can also suggest how he can progress his Principal Azure Cloud Solution Architect career.
 """
 system_message = f"<|im_start|>system\n{base_system_message.strip()}\n<|im_end|>"
