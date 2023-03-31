@@ -6,8 +6,8 @@ User can change the personal assistant language and voice by selecting them from
 
 ## Current State
   * MVP version is now functional and there are two different versions both for different models
-     * One is using Azure ChatGPT 
-     * And the other is using GPT-4
+     * One is using Azure ChatGPT (Personal-assistant-ChatGPT-Tony.py)
+     * And the other is using GPT-4 (Personal-assistant-GPT-4-Tony.py)
   * (Azure OpenAI version works too)
   * Azure Cognitive Services handles voice capture and speech
   * (optional) Uses stream deck to initialize communication
