@@ -5,7 +5,9 @@ User can change the personal assistant language and voice by selecting them from
 ![Alt text](appdata/language-and-voice-selection.png)
 
 ## Current State
-  * MVP functional by using Azure ChatGPT and GPT-4
+  * MVP version is now functional and there are two different versions both for different models
+     * One is using Azure ChatGPT 
+     * And the other is using GPT-4
   * (Azure OpenAI version works too)
   * Azure Cognitive Services handles voice capture and speech
   * (optional) Uses stream deck to initialize communication
