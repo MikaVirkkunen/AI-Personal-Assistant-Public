@@ -69,7 +69,11 @@ speech_config.speech_synthesis_voice_name='en-US-TonyNeural'
 ```
 
 User experience with Stream Deck is something like this:
-https://github.com/MikaVirkkunen/AI-Personal-Assistant-Public/blob/main/appdata/VID20230322090357.mp4
+
+<video width="320" height="240" controls>
+  <source src="/appdata/VID20230322090357.mp4" type="video/mp4">
+</video>
+
 
 Press play to see the video.
 
