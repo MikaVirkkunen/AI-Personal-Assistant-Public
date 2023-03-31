@@ -68,16 +68,9 @@ Be supportative. While talking with user you can also suggest how he can progres
 speech_config.speech_synthesis_voice_name='en-US-TonyNeural'
 ```
 
-End result...
+End result should be something like this...
 
-<!-- <video width="320" height="240" controls>
-  <source src="appdata/VID20230322090357.mp4" type="video/mp4">
-</video> -->
-<!-- [![Watch the video](appdata/IMG20230322081851.jpg)](appdata/VID20230322090357.mp4) -->
-
-[User experience with Stream Deck is something like this](appdata/Tim.mp4)
-
-Press play to see the video.
+https://user-images.githubusercontent.com/14095534/229195499-9b1f1758-e2f2-4180-bd6c-fad652b8aa38.mp4
 
 ---
 **NOTE**
