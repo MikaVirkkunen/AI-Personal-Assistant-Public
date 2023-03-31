@@ -71,7 +71,7 @@ speech_config.speech_synthesis_voice_name='en-US-TonyNeural'
 User experience with Stream Deck is something like this:
 
 <video width="320" height="240" controls>
-  <source src="/appdata/VID20230322090357.mp4" type="video/mp4">
+  <source src="appdata/VID20230322090357.mp4" type="video/mp4">
 </video>
 
 
