@@ -69,7 +69,6 @@ speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config, au
 text = output
 
 speech_synthesis_result = speech_synthesizer.speak_text_async(text).get()
-
 if speech_synthesis_result.reason == speechsdk.ResultReason.SynthesizingAudioCompleted:
     "Speech synthesized for text [{}]".format(text)
 elif speech_synthesis_result.reason == speechsdk.ResultReason.Canceled:

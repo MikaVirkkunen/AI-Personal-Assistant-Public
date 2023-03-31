@@ -50,13 +50,9 @@ print(output['choices'][0]['message']['content'])
 
 speech_config = speechsdk.SpeechConfig(subscription=os.environ.get('COG_SERVICE_KEY'), region=os.environ.get('COG_SERVICE_REGION'))  
 audio_config = speechsdk.audio.AudioOutputConfig(use_default_speaker=True)
-
 speech_config.speech_synthesis_voice_name='en-US-TonyNeural'
-
 speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config, audio_config=audio_config)
-
 text = output2
-
 speech_synthesis_result = speech_synthesizer.speak_text_async(text).get()
 
 if speech_synthesis_result.reason == speechsdk.ResultReason.SynthesizingAudioCompleted:  

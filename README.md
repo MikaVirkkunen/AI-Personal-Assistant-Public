@@ -9,7 +9,7 @@ User can change the personal assistant language and voice by selecting them from
   * (Azure OpenAI version works too)
   * Azure Cognitive Services handles voice capture and speech
   * (optional) Uses stream deck to initialize communication
-
+  * Currently the communication doesn't continue so user talks to OpenAI without it remembering previous messages
 
 ## How it works
   ![Alt text](appdata/architecture.png)
@@ -67,6 +67,12 @@ Be supportative. While talking with user you can also suggest how he can progres
 ```
 speech_config.speech_synthesis_voice_name='en-US-TonyNeural'
 ```
+
+User experience with Stream Deck is something like this:
+https://github.com/MikaVirkkunen/AI-Personal-Assistant-Public/blob/main/appdata/VID20230322090357.mp4
+
+Press play to see the video.
+
 ---
 **NOTE**
 
